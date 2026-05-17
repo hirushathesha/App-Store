@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hirusha App Store - Premium Apps & Games</title>
+  <meta name="description" content="Hirusha App Store - Download premium Android and Windows apps, games, and mods.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
+<base target="_blank">
+</head>
+<body>
+  <!-- Background Blobs -->
+  <div class="bg-blobs">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+  </div>
+
+  <!-- Loader -->
+  <div class="loader-overlay" id="loader">
+    <div class="loader"></div>
+    <div class="loader-text">HIRUSHA APP STORE</div>
+  </div>
+
+  <!-- Header -->
+  <header class="header" id="mainHeader">
+    <a href="index.html" class="logo">
+      <div class="logo-icon">🚀</div>
+      <span>Hirusha Store</span>
+    </a>
+
+    <nav class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#apps">Apps</a>
+      <a href="#categories">Categories</a>
+      <a href="admin.html">Admin</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="icon-btn" id="themeToggle" title="Toggle theme">☀️</button>
+      <a href="admin.html" class="icon-btn" title="Admin Panel">👤</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-badge">✨ Premium App Store by Hirusha</div>
+    <h1 class="hero-title">Hirusha App Store</h1>
+    <p class="hero-subtitle">
+      Discover, download, and enjoy the best Android APKs and Windows PC apps. 
+      Curated by Hirusha for the ultimate experience.
+    </p>
+
+    <div class="search-container">
+      <span class="search-icon">🔍</span>
+      <input type="text" class="search-bar" id="searchInput" placeholder="Search apps, games, tools, mods...">
+      <div class="search-filters">
+        <button class="filter-chip active" data-filter="platform" data-value="All">🌐 All Platforms</button>
+        <button class="filter-chip" data-filter="platform" data-value="Android">🤖 Android</button>
+        <button class="filter-chip" data-filter="platform" data-value="Windows">🖥️ Windows</button>
+      </div>
+    </div>
+
+    <div class="hero-stats">
+      <div class="stat-item">
+        <div class="stat-value" id="statTotalApps">0</div>
+        <div class="stat-label">Apps</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value" id="statDownloads">0</div>
+        <div class="stat-label">Downloads</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value" id="statUsers">50K+</div>
+        <div class="stat-label">Users</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories -->
+  <section class="categories" id="categories">
+    <div class="section-header">
+      <h2 class="section-title"><span class="icon">📂</span> Categories</h2>
+    </div>
+    <div class="category-pills">
+      <button class="category-pill active" data-category="All">
+        <span class="pill-icon">🌐</span> All
+      </button>
+      <button class="category-pill" data-category="Android">
+        <span class="pill-icon">🤖</span> Android
+      </button>
+      <button class="category-pill" data-category="Windows">
+        <span class="pill-icon">🖥️</span> Windows
+      </button>
+      <button class="category-pill" data-category="Games">
+        <span class="pill-icon">🎮</span> Games
+      </button>
+      <button class="category-pill" data-category="Mods">
+        <span class="pill-icon">⚡</span> Mods
+      </button>
+      <button class="category-pill" data-category="Tools">
+        <span class="pill-icon">🛠️</span> Tools
+      </button>
+    </div>
+  </section>
+
+  <!-- Featured Apps -->
+  <section class="featured-section">
+    <div class="section-header">
+      <h2 class="section-title"><span class="icon">🔥</span> Featured Apps</h2>
+      <span class="section-subtitle">Handpicked by Hirusha</span>
+    </div>
+    <div class="featured-slider" id="featuredSlider">
+      <!-- Injected by JS -->
+    </div>
+  </section>
+
+  <!-- Trending / All Apps -->
+  <section class="app-grid-section" id="apps">
+    <div class="section-header" style="padding: 0 2rem; max-width: 1400px; margin: 0 auto;">
+      <h2 class="section-title"><span class="icon">⭐</span> Trending Now</h2>
+      <span class="section-subtitle">Most popular downloads this week</span>
+    </div>
+    <div class="app-grid" id="appGrid">
+      <!-- Injected by JS -->
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-brand">🚀 Hirusha App Store</div>
+    <p>Developed with 💜 by <strong>Hirusha</strong></p>
+    <p style="margin-top: 0.5rem; font-size: 0.85rem;">Premium apps for Android & Windows PC</p>
+  </footer>
+
+  <!-- App Detail Modal -->
+  <div class="modal-overlay" id="appModal">
+    <div class="modal-content glass-strong">
+      <button class="modal-close" onclick="closeModal('appModal')">✕</button>
+      <div id="modalBody">
+        <!-- Injected by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Install Guide Modal -->
+  <div class="modal-overlay" id="installModal">
+    <div class="modal-content glass-strong" style="max-width: 600px;">
+      <button class="modal-close" onclick="closeModal('installModal')">✕</button>
+      <div id="installGuideBody" style="padding: 2rem;">
+        <!-- Injected by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
